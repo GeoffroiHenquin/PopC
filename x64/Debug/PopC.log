@@ -1,0 +1,5 @@
+﻿  Window.cpp
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(22,8): warning C4101: 'hpen': unreferenced local variable
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(21,10): warning C4101: 'hbrush': unreferenced local variable
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(17,8): warning C4101: 'hw': unreferenced local variable
+  PopC.vcxproj -> D:\GE_project\modules\PopC\PopC\x64\Debug\PopC.exe
