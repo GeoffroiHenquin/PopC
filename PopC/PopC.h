@@ -1,18 +1,33 @@
 #pragma once
-
-#include <Windows.h>
-#include <vector>
 #include "window/Window.h"
-
 class PopC
 {
-private:
-	static std::vector<Window> WindowList;
-
 public:
-	static void AddWindow();
-	static void AddWindow(LPCWSTR window_title, HICON icon, int x_position, int y_position, int width, int height);
+	PopC();
+	~PopC();
+	static PopC& Instance();
+private:
+	static PopC instance;
+	Window win_instance;
+private:
+	// Data to create a window
+	char window_title;
+	HICON icon;
+	int x_position;
+	int y_position;
+	int width;
+	int height;
+public:
+	void Setup(char window_title, HICON icon, int x_position, int y_position, int width, int height);
+	void Start();
+	void Paint();
+	void Stop();
 
-	static Window& GetWindow(HWND hw);
+	// Hide and show the console
+	void HideConsole();
+	void ShowConsole();
+	bool IsConsoleVisible();
+
+	// Add graphics to the window
 };
 

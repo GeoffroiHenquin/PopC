@@ -1,19 +1,55 @@
 #include "PopC.h"
 
-void PopC::AddWindow()
+PopC PopC::instance;
+
+PopC::PopC()
 {
-	WindowList.push_back(Window());
 }
 
-void PopC::AddWindow(LPCWSTR window_title, HICON icon, int x_position, int y_position, int width, int height)
+PopC::~PopC()
 {
-	WindowList.push_back(Window(window_title, icon, x_position, y_position, width, height));
 }
 
-Window& PopC::GetWindow(HWND hw)
+PopC& PopC::Instance()
 {
-	for (int i = 0; i < WindowList.size(); i++)
-	{
-		if (WindowList.at(i).Get_hWnd() == hw) { return WindowList.at(i); }
-	}
+	return instance;
+}
+
+void PopC::Setup(char window_title_p, HICON icon_p, int x_position_p, int y_position_p, int width_p, int height_p)
+{
+	window_title = window_title_p;
+	icon = icon_p;
+	x_position = x_position_p;
+	y_position = y_position_p;
+	width = width_p;
+	height = height_p;
+}
+
+void PopC::Start()
+{
+	win_instance = Window();
+}
+
+void PopC::Paint()
+{
+}
+
+void PopC::Stop()
+{
+	win_instance.~Window();
+}
+
+void PopC::HideConsole()
+{
+	::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+}
+
+void PopC::ShowConsole()
+{
+	::ShowWindow(::GetConsoleWindow(), SW_SHOW);
+}
+
+bool PopC::IsConsoleVisible()
+{
+	return ::IsWindowVisible(::GetConsoleWindow()) != FALSE;
 }

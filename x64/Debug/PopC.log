@@ -1,5 +1,21 @@
 ﻿  Window.cpp
-D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(22,8): warning C4101: 'hpen': unreferenced local variable
-D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(21,10): warning C4101: 'hbrush': unreferenced local variable
-D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(17,8): warning C4101: 'hw': unreferenced local variable
-  PopC.vcxproj -> D:\GE_project\modules\PopC\PopC\x64\Debug\PopC.exe
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(10,21): error C2065: 'Window': undeclared identifier
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(10,14): error C2923: 'std::vector': 'Window' is not a valid template type argument for parameter '_Ty'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(10): message : see declaration of 'Window'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(10,14): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(16,15): error C2143: syntax error: missing ';' before '&'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(16,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(16,35): error C2238: unexpected token(s) preceding ';'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(17,15): error C2143: syntax error: missing ';' before '&'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(17,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(17,9): error C2086: 'int PopC::Window': redefinition
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(17,37): error C2238: unexpected token(s) preceding ';'
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(14,9): error C2039: 'GetWindow': is not a member of 'PopC'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(7): message : see declaration of 'PopC'
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(14,23): error C2660: 'GetWindow': function does not take 1 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um\winuser.h(10001,1): message : see declaration of 'GetWindow'
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(18,27): error C2039: 'GetWindow': is not a member of 'PopC'
+D:\GE_project\modules\PopC\PopC\PopC\PopC.h(7): message : see declaration of 'PopC'
+D:\GE_project\modules\PopC\PopC\PopC\window\Window.cpp(18,41): error C2660: 'GetWindow': function does not take 1 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um\winuser.h(10001,1): message : see declaration of 'GetWindow'
